@@ -9,12 +9,12 @@ class {{Class}}UseCase {
 
   {{Class}}UseCase(this.repository);
 
-  Future<ResponseModel> findAll() async {
-    return await repository.findAll();
-  }
-
   Future<ResponseModel> find(int id) async {
     return await repository.find(id);
+  }
+
+  Future<ResponseModel> findAll() async {
+    return await repository.findAll();
   }
 
   Future<ResponseModel> create({{Class}}Model data) async {
