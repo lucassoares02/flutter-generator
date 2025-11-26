@@ -10,7 +10,7 @@ abstract class BaseController<T> extends ValueNotifier<StateApp> {
     try {
       final response = await action();
       if (response.success) {
-        state.value = SuccessState<T>(response.data);
+        state.value = SuccessState(response.data);
       } else {
         state.value = ErrorState(response.message);
       }
