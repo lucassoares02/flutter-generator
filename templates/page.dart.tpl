@@ -14,6 +14,7 @@ class _{{Class}}PageState extends State<{{Class}}Page> {
 
   @override
   void initState() {
+    //add gel all items
     controller.findAll();
     super.initState();
   }
