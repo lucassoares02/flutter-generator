@@ -10,7 +10,7 @@ class {{Class}}Page extends StatefulWidget {
 }
 
 class _{{Class}}PageState extends State<{{Class}}Page> {
-  late final {{Class}}Controller controller;
+  late final {{Class}}Controller controller = {{Class}}Controller(StartState(), {{Class}}UseCase({{Class}}Repository()));
 
   @override
   void initState() {
