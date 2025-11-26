@@ -1,6 +1,7 @@
 import 'package:default_project/features/{{base}}/{{base}}_usecase.dart';
 import 'package:default_project/core/state/app_state.dart';
 import '../../core/state/base_controller.dart';
+import 'package:flutter/material.dart';
 import '{{base}}_model.dart';
 
 class {{Class}}Controller extends BaseController<{{Class}}Model> {
