@@ -5,17 +5,17 @@ import '../services/response_model.dart';
 abstract class BaseController<T> extends ValueNotifier<StateApp> {
   BaseController(super.initialState);
 
-  Future<void> runWithState(Future<ResponseModel> Function() action, StateApp state, {String? errorMessage}) async {
-    state = LoadingState();
+  Future<void> runWithState(Future<ResponseModel> Function() action, ValueNotifier<StateApp> state, {String? errorMessage}) async {
+    state.value = LoadingState();
     try {
       final response = await action();
       if (response.success) {
-        state = SuccessState<T>(response.data);
+        state.value = SuccessState<T>(response.data);
       } else {
-        state = ErrorState(response.message);
+        state.value = ErrorState(response.message);
       }
     } catch (e) {
-      state = ErrorState(e.toString());
+      state.value = ErrorState(e.toString());
     }
   }
 }
