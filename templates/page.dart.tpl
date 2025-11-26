@@ -14,8 +14,8 @@ class _{{Class}}PageState extends State<{{Class}}Page> {
 
   @override
   void initState() {
+    {{base}}Controller.findAll();
     super.initState();
-    // Inicialize seu controller aqui
   }
 
   @override
