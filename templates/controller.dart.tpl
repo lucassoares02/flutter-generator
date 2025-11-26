@@ -8,11 +8,11 @@ class {{Class}}Controller extends BaseController<{{Class}}Model> {
 
   {{Class}}Controller(super.initialState, this.{{base}}Usecase);
 
-  StateApp<StartState> stateFind = StartState();
-  StateApp<StartState> stateFindAll = StartState();
-  StateApp<StartState> stateCreate = StartState();
-  StateApp<StartState> stateUpdate = StartState();
-  StateApp<StartState> stateDelete = StartState();
+  ValueNotifier<StateApp<StartState>> stateFind = ValueNotifier(StartState());
+  ValueNotifier<StateApp<StartState>> stateFindAll = ValueNotifier(StartState());
+  ValueNotifier<StateApp<StartState>> stateCreate = ValueNotifier(StartState());
+  ValueNotifier<StateApp<StartState>> stateUpdate = ValueNotifier(StartState());
+  ValueNotifier<StateApp<StartState>> stateDelete = ValueNotifier(StartState());
 
   Future<void> find(int id) async => runWithState(() => {{base}}Usecase.find(id), stateFindAll);
   Future<void> findAll() async => runWithState(() => {{base}}Usecase.findAll(), stateFind);
