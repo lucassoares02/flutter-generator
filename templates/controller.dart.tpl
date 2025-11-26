@@ -15,8 +15,8 @@ class {{Class}}Controller extends BaseController<{{Class}}Model> {
   ValueNotifier<StateApp<StartState>> stateUpdate = ValueNotifier(StartState());
   ValueNotifier<StateApp<StartState>> stateDelete = ValueNotifier(StartState());
 
-  Future<void> find(int id) async => runWithState(() => {{base}}Usecase.find(id), stateFindAll);
-  Future<void> findAll() async => runWithState(() => {{base}}Usecase.findAll(), stateFind);
+  Future<void> find(int id) async => runWithState(() => {{base}}Usecase.find(id), stateFind);
+  Future<void> findAll() async => runWithState(() => {{base}}Usecase.findAll(), stateFindAll);
   Future<void> create({{Class}}Model data) async => runWithState(() => {{base}}Usecase.create(data), stateCreate);
   Future<void> update({{Class}}Model data) async => runWithState(() => {{base}}Usecase.update(data), stateUpdate);
   Future<void> delete(int id) async => runWithState(() => {{base}}Usecase.delete(id), stateDelete);
