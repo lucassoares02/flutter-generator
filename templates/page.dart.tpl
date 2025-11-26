@@ -14,7 +14,7 @@ class _{{Class}}PageState extends State<{{Class}}Page> {
 
   @override
   void initState() {
-    {{base}}Controller.findAll();
+    controller.findAll();
     super.initState();
   }
 
