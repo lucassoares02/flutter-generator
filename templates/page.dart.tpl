@@ -1,6 +1,9 @@
 // Arquivo gerado automaticamente
 import 'package:flutter/material.dart';
+import '../../core/state/app_state.dart';
 import '{{base}}_controller.dart';
+import '{{base}}_repository.dart';
+import '{{base}}_usecase.dart';
 
 class {{Class}}Page extends StatefulWidget {
   const {{Class}}Page({super.key});
