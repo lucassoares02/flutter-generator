@@ -1,4 +1,4 @@
-// Arquivo gerado automaticamente
+// Imports updated
 import 'package:flutter/material.dart';
 import '../../core/state/app_state.dart';
 import '{{base}}_controller.dart';
